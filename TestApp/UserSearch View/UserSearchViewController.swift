@@ -32,7 +32,7 @@ class UserSearchViewController: UIViewController {
 
     private func bind() {
         // Bind searched repositories to tableView
-        _ = self.searchUsersViewModel.users.bind(to: self.tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { _, repo, cell in
+        let _ = self.searchUsersViewModel.repositories.bind(to: self.tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { _, repo, cell in
 
             cell.textLabel?.text = repo.name
 
