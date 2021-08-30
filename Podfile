@@ -7,6 +7,11 @@ target 'TestApp' do
   # Pods for TestApp
   pod 'SwiftLint'
 
+
+  # Rx
+  pod 'RxSwift', '6.2.0'
+  pod 'RxCocoa', '6.2.0'
+
 end
 
 post_install do |installer|
