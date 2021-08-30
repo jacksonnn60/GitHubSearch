@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoryViewController" customModule="TestApp" customModuleProvider="target">
+            <connections>
+                <outlet property="descriptionLabel" destination="xkL-ry-ZrS" id="1Vj-0J-43d"/>
+                <outlet property="isPrivateLabel" destination="tx7-zd-MBm" id="gf2-uR-mat"/>
+                <outlet property="ownerLabel" destination="XTg-6j-JJx" id="vHr-BP-f7K"/>
+                <outlet property="repositoryNameLabel" destination="VK8-su-mEc" id="ozK-IF-jl4"/>
+                <outlet property="view" destination="iN0-l3-epB" id="0cy-Yr-fH9"/>
+                <outlet property="watchersLabel" destination="Lug-bv-4Xu" id="QKR-z8-JpZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repository Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-su-mEc">
+                    <rect key="frame" x="20" y="54" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Owner:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTg-6j-JJx">
+                    <rect key="frame" x="20" y="90" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcW-CD-X2H">
+                    <rect key="frame" x="20" y="126" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xkL-ry-ZrS">
+                    <rect key="frame" x="20" y="155" width="374" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is private:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx7-zd-MBm">
+                    <rect key="frame" x="20" y="194" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Watchers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lug-bv-4Xu">
+                    <rect key="frame" x="20" y="230" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xkL-ry-ZrS" firstAttribute="trailing" secondItem="kcW-CD-X2H" secondAttribute="trailing" id="1u4-HF-Rx0"/>
+                <constraint firstItem="Lug-bv-4Xu" firstAttribute="leading" secondItem="tx7-zd-MBm" secondAttribute="leading" id="6W9-dg-hnO"/>
+                <constraint firstItem="Lug-bv-4Xu" firstAttribute="trailing" secondItem="tx7-zd-MBm" secondAttribute="trailing" id="8UK-eP-HiE"/>
+                <constraint firstItem="XTg-6j-JJx" firstAttribute="top" secondItem="VK8-su-mEc" secondAttribute="bottom" constant="15" id="AFe-NX-AWy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="VK8-su-mEc" secondAttribute="trailing" constant="20" id="BbK-5T-h0j"/>
+                <constraint firstItem="tx7-zd-MBm" firstAttribute="top" secondItem="xkL-ry-ZrS" secondAttribute="bottom" constant="18.5" id="JQb-tf-2rC"/>
+                <constraint firstItem="XTg-6j-JJx" firstAttribute="leading" secondItem="VK8-su-mEc" secondAttribute="leading" id="NgC-rn-Lcc"/>
+                <constraint firstItem="XTg-6j-JJx" firstAttribute="trailing" secondItem="VK8-su-mEc" secondAttribute="trailing" id="aDn-AS-FXg"/>
+                <constraint firstItem="VK8-su-mEc" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="aww-y7-6gt"/>
+                <constraint firstItem="VK8-su-mEc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ckA-ID-oKp"/>
+                <constraint firstItem="kcW-CD-X2H" firstAttribute="trailing" secondItem="XTg-6j-JJx" secondAttribute="trailing" id="jiR-wy-XxM"/>
+                <constraint firstItem="kcW-CD-X2H" firstAttribute="top" secondItem="XTg-6j-JJx" secondAttribute="bottom" constant="15" id="kYJ-Nz-oHj"/>
+                <constraint firstItem="tx7-zd-MBm" firstAttribute="trailing" secondItem="xkL-ry-ZrS" secondAttribute="trailing" id="lXi-7L-dZG"/>
+                <constraint firstItem="xkL-ry-ZrS" firstAttribute="top" secondItem="kcW-CD-X2H" secondAttribute="bottom" constant="8" symbolic="YES" id="pO3-M4-kUV"/>
+                <constraint firstItem="Lug-bv-4Xu" firstAttribute="top" secondItem="tx7-zd-MBm" secondAttribute="bottom" constant="15" id="q8R-S5-tO6"/>
+                <constraint firstItem="xkL-ry-ZrS" firstAttribute="leading" secondItem="kcW-CD-X2H" secondAttribute="leading" id="uuL-bM-T9P"/>
+                <constraint firstItem="tx7-zd-MBm" firstAttribute="leading" secondItem="xkL-ry-ZrS" secondAttribute="leading" id="wMc-U9-JHA"/>
+                <constraint firstItem="kcW-CD-X2H" firstAttribute="leading" secondItem="XTg-6j-JJx" secondAttribute="leading" id="xok-E2-hcx"/>
+            </constraints>
+            <point key="canvasLocation" x="129" y="100"/>
+        </view>
+    </objects>
+</document>

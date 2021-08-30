@@ -18,10 +18,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         let controller = RepositorySearchViewController(nibName: "RepositorySearchViewController", bundle: nil)
-
         controller.searchUsersViewModel = RepositorySearchViewModel()
 
-        window.rootViewController = controller
+        let navigationController = UINavigationController(rootViewController: controller)
+
+        window.rootViewController = navigationController
 
         window.makeKeyAndVisible()
         self.window = window

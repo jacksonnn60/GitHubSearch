@@ -23,6 +23,11 @@ class RepositorySearchViewController: UIViewController {
 
     // MARK: - Override
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureUI()
@@ -38,6 +43,22 @@ class RepositorySearchViewController: UIViewController {
             cell.textLabel?.text = repo.name
 
         }.disposed(by: disposeBag)
+
+        // Set selc action for cell
+        self.tableView.rx.itemSelected
+          .subscribe(onNext: { [weak self] indexPath in
+            do {
+                let repositories = try self?.searchUsersViewModel.repositories.value()
+                guard let repository = repositories?[indexPath.row] else {
+                    return
+                }
+                let repositoryController = RepositoryViewController(nibName: "RepositoryViewController", repository: repository)
+                self?.navigationController?.pushViewController(repositoryController, animated: true)
+            } catch {
+                print("Error get repository")
+            }
+
+          }).disposed(by: disposeBag)
     }
 
     private func configureUI() {
