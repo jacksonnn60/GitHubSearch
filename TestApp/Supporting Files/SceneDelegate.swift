@@ -17,9 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
 
-        let controller = UserSearchViewController(nibName: "UserSearchViewController", bundle: nil)
+        let controller = RepositorySearchViewController(nibName: "RepositorySearchViewController", bundle: nil)
 
-        controller.searchUsersViewModel = UserSearchViewModel()
+        controller.searchUsersViewModel = RepositorySearchViewModel()
 
         window.rootViewController = controller
 

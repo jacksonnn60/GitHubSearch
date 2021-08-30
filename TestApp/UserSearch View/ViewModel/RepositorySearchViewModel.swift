@@ -9,13 +9,13 @@ import Foundation
 import RxCocoa
 import RxSwift
 
-private protocol UserSearchViewModelProtocol {
+private protocol RepositorySearchViewModelProtocol {
     var repositories: BehaviorSubject<[Repository]> { get set }
 
     func searhUsers(with name: String)
 }
 
-class UserSearchViewModel: UserSearchViewModelProtocol {
+class RepositorySearchViewModel: RepositorySearchViewModelProtocol {
     var repositories = BehaviorSubject<[Repository]>.init(value: [])
 
     func searhUsers(with name: String) {

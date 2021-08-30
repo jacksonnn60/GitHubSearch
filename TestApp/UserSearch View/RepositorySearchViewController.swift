@@ -9,15 +9,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class UserSearchViewController: UIViewController {
+class RepositorySearchViewController: UIViewController {
 
     // MARK: - @IBOutlets + views
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
 
-    // -
-    var searchUsersViewModel: UserSearchViewModel!
+    // MARK: - Variables
+
+    var searchUsersViewModel: RepositorySearchViewModel!
     var disposeBag =  DisposeBag()
 
     // MARK: - Override
@@ -32,7 +33,7 @@ class UserSearchViewController: UIViewController {
 
     private func bind() {
         // Bind searched repositories to tableView
-        let _ = self.searchUsersViewModel.repositories.bind(to: self.tableView.rx.items(cellIdentifier: "Cell", cellType: UITableViewCell.self)) { _, repo, cell in
+        _ = searchUsersViewModel.repositories.bind(to: tableView.rx.items(cellIdentifier: Keys.cell.rawValue, cellType: UITableViewCell.self)) { _, repo, cell in
 
             cell.textLabel?.text = repo.name
 
@@ -40,12 +41,15 @@ class UserSearchViewController: UIViewController {
     }
 
     private func configureUI() {
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Keys.cell.rawValue)
         self.textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
     }
 
     @objc func textDidChange(_ textField: UITextField) {
-        guard let text = textField.text else { return }
-        self.searchUsersViewModel.searhUsers(with: text)
+        guard textField.text != "" else {
+            // Clean repositories if textField is empty
+            self.searchUsersViewModel.repositories.onNext([])
+            return }
+        self.searchUsersViewModel.searhUsers(with: textField.text!)
     }
 }

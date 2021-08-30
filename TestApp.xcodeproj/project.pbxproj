@@ -12,11 +12,12 @@
 		EE4DB6FC26DC2DC5001F306A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB6FB26DC2DC5001F306A /* SceneDelegate.swift */; };
 		EE4DB70326DC2DC6001F306A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB70226DC2DC6001F306A /* Assets.xcassets */; };
 		EE4DB70626DC2DC6001F306A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB70426DC2DC6001F306A /* LaunchScreen.storyboard */; };
-		EE4DB74D26DD0A2E001F306A /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB74C26DD0A2E001F306A /* UserSearchViewController.swift */; };
-		EE4DB75226DD0AFA001F306A /* UserSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB75126DD0AFA001F306A /* UserSearchViewController.xib */; };
-		EE4DB75426DD1410001F306A /* UserSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75326DD1410001F306A /* UserSearchViewModel.swift */; };
+		EE4DB74D26DD0A2E001F306A /* RepositorySearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB74C26DD0A2E001F306A /* RepositorySearchViewController.swift */; };
+		EE4DB75226DD0AFA001F306A /* RepositorySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB75126DD0AFA001F306A /* RepositorySearchViewController.xib */; };
+		EE4DB75426DD1410001F306A /* RepositorySearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75326DD1410001F306A /* RepositorySearchViewModel.swift */; };
 		EE4DB75626DD14BA001F306A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75526DD14BA001F306A /* Repository.swift */; };
 		EE4DB75A26DD198B001F306A /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75926DD198B001F306A /* Rest.swift */; };
+		EE4DB75D26DD2C46001F306A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75C26DD2C46001F306A /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,11 +30,12 @@
 		EE4DB70226DC2DC6001F306A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE4DB70526DC2DC6001F306A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE4DB70726DC2DC6001F306A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE4DB74C26DD0A2E001F306A /* UserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
-		EE4DB75126DD0AFA001F306A /* UserSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSearchViewController.xib; sourceTree = "<group>"; };
-		EE4DB75326DD1410001F306A /* UserSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchViewModel.swift; sourceTree = "<group>"; };
+		EE4DB74C26DD0A2E001F306A /* RepositorySearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchViewController.swift; sourceTree = "<group>"; };
+		EE4DB75126DD0AFA001F306A /* RepositorySearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositorySearchViewController.xib; sourceTree = "<group>"; };
+		EE4DB75326DD1410001F306A /* RepositorySearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositorySearchViewModel.swift; sourceTree = "<group>"; };
 		EE4DB75526DD14BA001F306A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		EE4DB75926DD198B001F306A /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
+		EE4DB75C26DD2C46001F306A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				EE4DB70E26DCB350001F306A /* Supporting Files */,
 				EE4DB70726DC2DC6001F306A /* Info.plist */,
 				EE4DB75B26DD200E001F306A /* Rest */,
+				EE4DB75C26DD2C46001F306A /* Keys.swift */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -110,8 +113,8 @@
 		EE4DB75026DD0A54001F306A /* UserSearch View */ = {
 			isa = PBXGroup;
 			children = (
-				EE4DB74C26DD0A2E001F306A /* UserSearchViewController.swift */,
-				EE4DB75126DD0AFA001F306A /* UserSearchViewController.xib */,
+				EE4DB74C26DD0A2E001F306A /* RepositorySearchViewController.swift */,
+				EE4DB75126DD0AFA001F306A /* RepositorySearchViewController.xib */,
 				EE4DB75826DD151E001F306A /* ViewModel */,
 			);
 			path = "UserSearch View";
@@ -128,7 +131,7 @@
 		EE4DB75826DD151E001F306A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				EE4DB75326DD1410001F306A /* UserSearchViewModel.swift */,
+				EE4DB75326DD1410001F306A /* RepositorySearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -201,7 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE4DB75226DD0AFA001F306A /* UserSearchViewController.xib in Resources */,
+				EE4DB75226DD0AFA001F306A /* RepositorySearchViewController.xib in Resources */,
 				EE4DB70626DC2DC6001F306A /* LaunchScreen.storyboard in Resources */,
 				EE4DB70326DC2DC6001F306A /* Assets.xcassets in Resources */,
 			);
@@ -274,9 +277,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE4DB6FA26DC2DC5001F306A /* AppDelegate.swift in Sources */,
-				EE4DB75426DD1410001F306A /* UserSearchViewModel.swift in Sources */,
-				EE4DB74D26DD0A2E001F306A /* UserSearchViewController.swift in Sources */,
+				EE4DB75426DD1410001F306A /* RepositorySearchViewModel.swift in Sources */,
+				EE4DB74D26DD0A2E001F306A /* RepositorySearchViewController.swift in Sources */,
 				EE4DB75A26DD198B001F306A /* Rest.swift in Sources */,
+				EE4DB75D26DD2C46001F306A /* Keys.swift in Sources */,
 				EE4DB75626DD14BA001F306A /* Repository.swift in Sources */,
 				EE4DB6FC26DC2DC5001F306A /* SceneDelegate.swift in Sources */,
 			);
