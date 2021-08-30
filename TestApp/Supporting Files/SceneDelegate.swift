@@ -18,6 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
 
         let controller = UserSearchViewController(nibName: "UserSearchViewController", bundle: nil)
+
+        controller.searchUsersViewModel = UserSearchViewModel()
+
         window.rootViewController = controller
 
         window.makeKeyAndVisible()

@@ -14,6 +14,9 @@
 		EE4DB70626DC2DC6001F306A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB70426DC2DC6001F306A /* LaunchScreen.storyboard */; };
 		EE4DB74D26DD0A2E001F306A /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB74C26DD0A2E001F306A /* UserSearchViewController.swift */; };
 		EE4DB75226DD0AFA001F306A /* UserSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB75126DD0AFA001F306A /* UserSearchViewController.xib */; };
+		EE4DB75426DD1410001F306A /* UserSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75326DD1410001F306A /* UserSearchViewModel.swift */; };
+		EE4DB75626DD14BA001F306A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75526DD14BA001F306A /* Repository.swift */; };
+		EE4DB75A26DD198B001F306A /* Rest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75926DD198B001F306A /* Rest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		EE4DB70726DC2DC6001F306A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE4DB74C26DD0A2E001F306A /* UserSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
 		EE4DB75126DD0AFA001F306A /* UserSearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserSearchViewController.xib; sourceTree = "<group>"; };
+		EE4DB75326DD1410001F306A /* UserSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSearchViewModel.swift; sourceTree = "<group>"; };
+		EE4DB75526DD14BA001F306A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		EE4DB75926DD198B001F306A /* Rest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +69,6 @@
 			isa = PBXGroup;
 			children = (
 				EE4DB6F826DC2DC5001F306A /* TestApp */,
-				EE4DB6F726DC2DC5001F306A /* Products */,
 				C8F31BA7825A83CB3FAD9F7B /* Pods */,
 				864655B2DFAA7F30EF348BB6 /* Frameworks */,
 			);
@@ -75,14 +80,18 @@
 				EE4DB6F626DC2DC5001F306A /* TestApp.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		EE4DB6F826DC2DC5001F306A /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				EE4DB75726DD14C5001F306A /* Model */,
+				EE4DB6F726DC2DC5001F306A /* Products */,
 				EE4DB75026DD0A54001F306A /* UserSearch View */,
 				EE4DB70E26DCB350001F306A /* Supporting Files */,
 				EE4DB70726DC2DC6001F306A /* Info.plist */,
+				EE4DB75B26DD200E001F306A /* Rest */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -103,8 +112,33 @@
 			children = (
 				EE4DB74C26DD0A2E001F306A /* UserSearchViewController.swift */,
 				EE4DB75126DD0AFA001F306A /* UserSearchViewController.xib */,
+				EE4DB75826DD151E001F306A /* ViewModel */,
 			);
 			path = "UserSearch View";
+			sourceTree = "<group>";
+		};
+		EE4DB75726DD14C5001F306A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EE4DB75526DD14BA001F306A /* Repository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EE4DB75826DD151E001F306A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EE4DB75326DD1410001F306A /* UserSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EE4DB75B26DD200E001F306A /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				EE4DB75926DD198B001F306A /* Rest.swift */,
+			);
+			path = Rest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +274,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE4DB6FA26DC2DC5001F306A /* AppDelegate.swift in Sources */,
+				EE4DB75426DD1410001F306A /* UserSearchViewModel.swift in Sources */,
 				EE4DB74D26DD0A2E001F306A /* UserSearchViewController.swift in Sources */,
+				EE4DB75A26DD198B001F306A /* Rest.swift in Sources */,
+				EE4DB75626DD14BA001F306A /* Repository.swift in Sources */,
 				EE4DB6FC26DC2DC5001F306A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
