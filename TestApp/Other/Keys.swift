@@ -10,3 +10,8 @@ import Foundation
 enum Keys: String, RawRepresentable {
     case cell
 }
+
+enum Controllers {
+    static let searchRepositoryController = "RepositorySearchViewController"
+    static let repositoryController = "RepositoryViewController"
+}

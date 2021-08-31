@@ -19,12 +19,13 @@ class RepositorySearchViewController: UIViewController {
     // MARK: - Variables
 
     private var searchRepositoryViewModel: RepositorySearchViewModel!
-    private var disposeBag =  DisposeBag()
+    private var disposeBag: DisposeBag!
 
     // MARK: - Init
 
-    init(nibName: String, searchRepositoryViewModel: RepositorySearchViewModel) {
+    init(nibName: String, searchRepositoryViewModel: RepositorySearchViewModel, disposeBag: DisposeBag) {
         self.searchRepositoryViewModel = searchRepositoryViewModel
+        self.disposeBag = disposeBag
         super.init(nibName: nibName, bundle: nil)
     }
 
@@ -63,7 +64,7 @@ class RepositorySearchViewController: UIViewController {
                 guard let repository = repositories?[indexPath.row] else {
                     return
                 }
-                let repositoryController = RepositoryViewController(nibName: "RepositoryViewController", repository: repository)
+                let repositoryController = RepositoryViewController(nibName: Controllers.repositoryController, repository: repository)
                 self?.navigationController?.pushViewController(repositoryController, animated: true)
             } catch {
                 print("Error get repository")

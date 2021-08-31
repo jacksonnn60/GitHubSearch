@@ -6,15 +6,24 @@
 //
 
 import Foundation
+import RxSwift
 import NeedleFoundation
 
  class RootComponent: BootstrapComponent {
 
     /* From documentation SwiftNeedle */
-    var repositorySearchViewController: RepositorySearchViewController {
-        return RepositorySearchViewController(nibName: "RepositorySearchViewController", searchRepositoryViewModel: RepositorySearchViewModel())
+
+    var disposeBag: DisposeBag {
+        return DisposeBag()
     }
 
+    var searchRepositoryViewModel: RepositorySearchViewModel {
+        return RepositorySearchViewModel()
+    }
+
+    var repositorySearchViewController: RepositorySearchViewController {
+        return RepositorySearchViewController(nibName: Controllers.searchRepositoryController, searchRepositoryViewModel: searchRepositoryViewModel, disposeBag: disposeBag)
+    }
  }
 
 

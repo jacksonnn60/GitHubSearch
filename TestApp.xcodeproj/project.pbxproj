@@ -96,8 +96,8 @@
 		EE4DB6F826DC2DC5001F306A /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				EEF9636426DE44B700659493 /* Sources */,
 				EEF9636326DE2E2200659493 /* RootComponent */,
-				EEF9636026DE2C3900659493 /* Sources */,
 				EE4DB70726DC2DC6001F306A /* Info.plist */,
 				EE4DB75026DD0A54001F306A /* RepositorySearch View */,
 				EE4DB76226DD2F06001F306A /* Repository View */,
@@ -172,20 +172,20 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
-		EEF9636026DE2C3900659493 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				EEF9636126DE2C4600659493 /* NeedleGenerated.swift */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
 		EEF9636326DE2E2200659493 /* RootComponent */ = {
 			isa = PBXGroup;
 			children = (
 				EE3505C926DD6FB400A4EC24 /* RootComponent.swift */,
 			);
 			path = RootComponent;
+			sourceTree = "<group>";
+		};
+		EEF9636426DE44B700659493 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EEF9636126DE2C4600659493 /* NeedleGenerated.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,7 +313,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nexport SOURCEKIT_LOGGIN=0 && needle generate Sources/NeedleGenerated.swift \n\n\n\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nexport SOURCEKIT_LOGGIN=0 && needle generate    TestApp/Sources/NeedleGenerated.swift TestApp/\n\n\n\n";
 		};
 		F8AD20137E992767E85EEB36 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
