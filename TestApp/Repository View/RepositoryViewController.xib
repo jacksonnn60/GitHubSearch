@@ -11,7 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepositoryViewController" customModule="TestApp" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionLabel" destination="xkL-ry-ZrS" id="1Vj-0J-43d"/>
-                <outlet property="isPrivateLabel" destination="tx7-zd-MBm" id="gf2-uR-mat"/>
+                <outlet property="languageLabele" destination="tx7-zd-MBm" id="gf2-uR-mat"/>
                 <outlet property="ownerLabel" destination="XTg-6j-JJx" id="vHr-BP-f7K"/>
                 <outlet property="repositoryNameLabel" destination="VK8-su-mEc" id="ozK-IF-jl4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="0cy-Yr-fH9"/>
@@ -47,7 +47,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is private:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx7-zd-MBm">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tx7-zd-MBm">
                     <rect key="frame" x="20" y="194" width="374" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>

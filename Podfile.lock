@@ -1,4 +1,5 @@
 PODS:
+  - NeedleFoundation (0.17.2)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
     - RxSwift (= 6.2.0)
@@ -8,23 +9,26 @@ PODS:
   - SwiftLint (0.43.1)
 
 DEPENDENCIES:
+  - NeedleFoundation
   - RxCocoa (= 6.2.0)
   - RxSwift (= 6.2.0)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
+    - NeedleFoundation
     - RxCocoa
     - RxRelay
     - RxSwift
     - SwiftLint
 
 SPEC CHECKSUMS:
+  NeedleFoundation: 36cfaea9ae9eb527a796f5c1df19296c722666b8
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 1dabfeae24a8756bcd0d5c2fd5bad02f146c56f4
+PODFILE CHECKSUM: 2ea7e44eb384890dd86f5d6d77d65bf743891956
 
 COCOAPODS: 1.10.2

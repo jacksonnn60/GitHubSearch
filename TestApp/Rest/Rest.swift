@@ -22,8 +22,6 @@ class Rest: RestProtocol {
             }
 
             let result = Result {
-
-                // You know you can call `decode` with it because it's Decodable
                 try JSONDecoder().decode(T.self, from: data)
             }
             completion(result)

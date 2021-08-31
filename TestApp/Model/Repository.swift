@@ -10,6 +10,9 @@ import Foundation
 struct Repository: Codable {
     var name: String
     var owner: OwnerKey
+    var watchers: Int?
+    var description: String?
+    var language: String
 }
 
 struct OwnerKey: Codable {

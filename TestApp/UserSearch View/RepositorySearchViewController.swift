@@ -18,8 +18,19 @@ class RepositorySearchViewController: UIViewController {
 
     // MARK: - Variables
 
-    var searchUsersViewModel: RepositorySearchViewModel!
-    var disposeBag =  DisposeBag()
+    private var searchRepositoryViewModel: RepositorySearchViewModel!
+    private var disposeBag =  DisposeBag()
+
+    // MARK: - Init
+
+    init(nibName: String, searchRepositoryViewModel: RepositorySearchViewModel) {
+        self.searchRepositoryViewModel = searchRepositoryViewModel
+        super.init(nibName: nibName, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     // MARK: - Override
 
@@ -38,7 +49,7 @@ class RepositorySearchViewController: UIViewController {
 
     private func bind() {
         // Bind searched repositories to tableView
-        _ = searchUsersViewModel.repositories.bind(to: tableView.rx.items(cellIdentifier: Keys.cell.rawValue, cellType: UITableViewCell.self)) { _, repo, cell in
+       _ = searchRepositoryViewModel.repositories.bind(to: tableView.rx.items(cellIdentifier: Keys.cell.rawValue, cellType: UITableViewCell.self)) { _, repo, cell in
 
             cell.textLabel?.text = repo.name
 
@@ -48,7 +59,7 @@ class RepositorySearchViewController: UIViewController {
         self.tableView.rx.itemSelected
           .subscribe(onNext: { [weak self] indexPath in
             do {
-                let repositories = try self?.searchUsersViewModel.repositories.value()
+                let repositories = try self?.searchRepositoryViewModel.repositories.value()
                 guard let repository = repositories?[indexPath.row] else {
                     return
                 }
@@ -69,8 +80,8 @@ class RepositorySearchViewController: UIViewController {
     @objc func textDidChange(_ textField: UITextField) {
         guard textField.text != "" else {
             // Clean repositories if textField is empty
-            self.searchUsersViewModel.repositories.onNext([])
+            self.searchRepositoryViewModel.repositories.onNext([])
             return }
-        self.searchUsersViewModel.searhUsers(with: textField.text!)
+        self.searchRepositoryViewModel.searhUsers(with: textField.text!)
     }
 }

@@ -14,7 +14,7 @@ class RepositoryViewController: UIViewController {
     @IBOutlet weak var repositoryNameLabel: UILabel!
     @IBOutlet weak var ownerLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    @IBOutlet weak var isPrivateLabel: UILabel!
+    @IBOutlet weak var languageLabele: UILabel!
     @IBOutlet weak var watchersLabel: UILabel!
 
     // MARK: - Variables
@@ -22,6 +22,7 @@ class RepositoryViewController: UIViewController {
     private var repository: Repository?
 
     // MARK: - Init
+
     init(nibName: String, repository: Repository) {
         self.repository = repository
         super.init(nibName: nibName, bundle: nil)
@@ -49,5 +50,8 @@ class RepositoryViewController: UIViewController {
         guard let repo = repository else { return }
         self.repositoryNameLabel.text = "Repository Name: \(repo.name)"
         self.ownerLabel.text = "Owner: \(repo.owner.login)"
+        self.descriptionLabel.text = repo.description ?? "--"
+        self.watchersLabel.text = "Watchers: \(repo.watchers ?? 0)"
+        self.languageLabele.text = "Language: \(repo.language)"
     }
 }

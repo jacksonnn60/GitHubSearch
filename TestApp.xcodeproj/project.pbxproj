@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E9FDC5DE3658B5AC6DA06EBF /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC6640DDCDD6CC776E23FB0 /* Pods_TestApp.framework */; };
+		EE3505CA26DD6FB400A4EC24 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3505C926DD6FB400A4EC24 /* DependencyContainer.swift */; };
 		EE4DB6FA26DC2DC5001F306A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB6F926DC2DC5001F306A /* AppDelegate.swift */; };
 		EE4DB6FC26DC2DC5001F306A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB6FB26DC2DC5001F306A /* SceneDelegate.swift */; };
 		EE4DB70326DC2DC6001F306A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB70226DC2DC6001F306A /* Assets.xcassets */; };
@@ -20,12 +21,14 @@
 		EE4DB75D26DD2C46001F306A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75C26DD2C46001F306A /* Keys.swift */; };
 		EE4DB75F26DD2EB8001F306A /* RepositoryViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75E26DD2EB8001F306A /* RepositoryViewControlle.swift */; };
 		EE4DB76126DD2F02001F306A /* RepositoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB76026DD2F02001F306A /* RepositoryViewController.xib */; };
+		EEF9635326DD7BE700659493 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF9635226DD7BE700659493 /* Builder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		154D26C37B78DB2A30BC6EBC /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		746BBF13C6C9979E09F4E8CA /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 		DEC6640DDCDD6CC776E23FB0 /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3505C926DD6FB400A4EC24 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		EE4DB6F626DC2DC5001F306A /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4DB6F926DC2DC5001F306A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE4DB6FB26DC2DC5001F306A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		EE4DB75C26DD2C46001F306A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EE4DB75E26DD2EB8001F306A /* RepositoryViewControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewControlle.swift; sourceTree = "<group>"; };
 		EE4DB76026DD2F02001F306A /* RepositoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryViewController.xib; sourceTree = "<group>"; };
+		EEF9635226DD7BE700659493 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EE3505CB26DD706000A4EC24 /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				EE3505C926DD6FB400A4EC24 /* DependencyContainer.swift */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
 		EE4DB6ED26DC2DC5001F306A = {
 			isa = PBXGroup;
 			children = (
@@ -92,14 +104,16 @@
 		EE4DB6F826DC2DC5001F306A /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				EE4DB70726DC2DC6001F306A /* Info.plist */,
 				EE4DB75026DD0A54001F306A /* UserSearch View */,
 				EE4DB76226DD2F06001F306A /* Repository View */,
 				EE4DB75726DD14C5001F306A /* Model */,
 				EE4DB6F726DC2DC5001F306A /* Products */,
 				EE4DB70E26DCB350001F306A /* Supporting Files */,
-				EE4DB70726DC2DC6001F306A /* Info.plist */,
 				EE4DB75B26DD200E001F306A /* Rest */,
-				EE4DB75C26DD2C46001F306A /* Keys.swift */,
+				EEF9634E26DD741A00659493 /* Other */,
+				EE3505CB26DD706000A4EC24 /* Dependency */,
+				EEF9635226DD7BE700659493 /* Builder.swift */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -156,6 +170,14 @@
 				EE4DB76026DD2F02001F306A /* RepositoryViewController.xib */,
 			);
 			path = "Repository View";
+			sourceTree = "<group>";
+		};
+		EEF9634E26DD741A00659493 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				EE4DB75C26DD2C46001F306A /* Keys.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +320,9 @@
 				EE4DB75D26DD2C46001F306A /* Keys.swift in Sources */,
 				EE4DB75F26DD2EB8001F306A /* RepositoryViewControlle.swift in Sources */,
 				EE4DB75626DD14BA001F306A /* Repository.swift in Sources */,
+				EE3505CA26DD6FB400A4EC24 /* DependencyContainer.swift in Sources */,
 				EE4DB6FC26DC2DC5001F306A /* SceneDelegate.swift in Sources */,
+				EEF9635326DD7BE700659493 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +392,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -424,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
