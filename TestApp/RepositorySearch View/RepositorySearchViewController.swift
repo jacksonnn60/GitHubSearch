@@ -18,13 +18,13 @@ class RepositorySearchViewController: UIViewController {
 
     // MARK: - Variables
 
-    private var searchRepositoryViewModel: RepositorySearchViewModel!
+    private var srchRepoVM: RepositorySearchViewModel!
     private var disposeBag: DisposeBag!
 
     // MARK: - Init
 
-    init(nibName: String, searchRepositoryViewModel: RepositorySearchViewModel, disposeBag: DisposeBag) {
-        self.searchRepositoryViewModel = searchRepositoryViewModel
+    init(nibName: String, searchRepoVM: RepositorySearchViewModel, disposeBag: DisposeBag) {
+        self.srchRepoVM = searchRepoVM
         self.disposeBag = disposeBag
         super.init(nibName: nibName, bundle: nil)
     }
@@ -49,22 +49,21 @@ class RepositorySearchViewController: UIViewController {
     // MARK: - Actions
 
     private func bind() {
+
         // Bind searched repositories to tableView
-       _ = searchRepositoryViewModel.repositories.bind(to: tableView.rx.items(cellIdentifier: Keys.cell.rawValue, cellType: UITableViewCell.self)) { _, repo, cell in
-
+       _ = srchRepoVM.repos.bind(to: tableView.rx.items(cellIdentifier: Keys.cell.rawValue, cellType: UITableViewCell.self)) { _, repo, cell in
             cell.textLabel?.text = repo.name
-
         }.disposed(by: disposeBag)
 
         // Set selc action for cell
         self.tableView.rx.itemSelected
           .subscribe(onNext: { [weak self] indexPath in
             do {
-                let repositories = try self?.searchRepositoryViewModel.repositories.value()
+                let repositories = try self?.srchRepoVM.repos.value()
                 guard let repository = repositories?[indexPath.row] else {
                     return
                 }
-                let repositoryController = RepositoryViewController(nibName: Controllers.repositoryController, repository: repository)
+                let repositoryController = RepositoryViewController(nibName: Controllers.repoVC, repository: repository)
                 self?.navigationController?.pushViewController(repositoryController, animated: true)
             } catch {
                 print("Error get repository")
@@ -81,8 +80,8 @@ class RepositorySearchViewController: UIViewController {
     @objc func textDidChange(_ textField: UITextField) {
         guard textField.text != "" else {
             // Clean repositories if textField is empty
-            self.searchRepositoryViewModel.repositories.onNext([])
+            self.srchRepoVM.repos.onNext([])
             return }
-        self.searchRepositoryViewModel.searhUsers(with: textField.text!)
+        self.srchRepoVM.searhUsers(with: textField.text!)
     }
 }

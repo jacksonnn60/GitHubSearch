@@ -12,6 +12,6 @@ enum Keys: String, RawRepresentable {
 }
 
 enum Controllers {
-    static let searchRepositoryController = "RepositorySearchViewController"
-    static let repositoryController = "RepositoryViewController"
+    static let searchRepoVC = "RepositorySearchViewController"
+    static let repoVC = "RepositoryViewController"
 }

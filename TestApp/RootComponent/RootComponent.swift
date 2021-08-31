@@ -17,12 +17,12 @@ import NeedleFoundation
         return DisposeBag()
     }
 
-    var searchRepositoryViewModel: RepositorySearchViewModel {
+    var searchRepoVM: RepositorySearchViewModel {
         return RepositorySearchViewModel()
     }
 
     var repositorySearchViewController: RepositorySearchViewController {
-        return RepositorySearchViewController(nibName: Controllers.searchRepositoryController, searchRepositoryViewModel: searchRepositoryViewModel, disposeBag: disposeBag)
+        return RepositorySearchViewController(nibName: Controllers.searchRepoVC, searchRepoVM: searchRepoVM, disposeBag: disposeBag)
     }
  }
 

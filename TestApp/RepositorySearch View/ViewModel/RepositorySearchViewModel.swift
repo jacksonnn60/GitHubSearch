@@ -10,19 +10,19 @@ import RxCocoa
 import RxSwift
 
 private protocol RepositorySearchViewModelProtocol {
-    var repositories: BehaviorSubject<[Repository]> { get set }
+    var repos: BehaviorSubject<[Repository]> { get set }
 
     func searhUsers(with name: String)
 }
 
 class RepositorySearchViewModel: RepositorySearchViewModelProtocol {
-    var repositories = BehaviorSubject<[Repository]>.init(value: [])
+    var repos = BehaviorSubject<[Repository]>.init(value: [])
 
     func searhUsers(with name: String) {
         Rest.get(urlString: "https://api.github.com/users/\(name)/repos", generalType: [Repository].self) { result in
             do {
                 let repositories = try result.get()
-                self.repositories.onNext(repositories)
+                self.repos.onNext(repositories)
             } catch {
                 print("Can not get repositories.")
             }
