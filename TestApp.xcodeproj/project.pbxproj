@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E9FDC5DE3658B5AC6DA06EBF /* Pods_TestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC6640DDCDD6CC776E23FB0 /* Pods_TestApp.framework */; };
-		EE3505CA26DD6FB400A4EC24 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3505C926DD6FB400A4EC24 /* DependencyContainer.swift */; };
+		EE3505CA26DD6FB400A4EC24 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3505C926DD6FB400A4EC24 /* RootComponent.swift */; };
 		EE4DB6FA26DC2DC5001F306A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB6F926DC2DC5001F306A /* AppDelegate.swift */; };
 		EE4DB6FC26DC2DC5001F306A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB6FB26DC2DC5001F306A /* SceneDelegate.swift */; };
 		EE4DB70326DC2DC6001F306A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB70226DC2DC6001F306A /* Assets.xcassets */; };
@@ -21,14 +21,14 @@
 		EE4DB75D26DD2C46001F306A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75C26DD2C46001F306A /* Keys.swift */; };
 		EE4DB75F26DD2EB8001F306A /* RepositoryViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75E26DD2EB8001F306A /* RepositoryViewControlle.swift */; };
 		EE4DB76126DD2F02001F306A /* RepositoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB76026DD2F02001F306A /* RepositoryViewController.xib */; };
-		EEF9635326DD7BE700659493 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF9635226DD7BE700659493 /* Builder.swift */; };
+		EEF9636226DE2C4600659493 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF9636126DE2C4600659493 /* NeedleGenerated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		154D26C37B78DB2A30BC6EBC /* Pods-TestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.debug.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.debug.xcconfig"; sourceTree = "<group>"; };
 		746BBF13C6C9979E09F4E8CA /* Pods-TestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestApp.release.xcconfig"; path = "Target Support Files/Pods-TestApp/Pods-TestApp.release.xcconfig"; sourceTree = "<group>"; };
 		DEC6640DDCDD6CC776E23FB0 /* Pods_TestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE3505C926DD6FB400A4EC24 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		EE3505C926DD6FB400A4EC24 /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
 		EE4DB6F626DC2DC5001F306A /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4DB6F926DC2DC5001F306A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE4DB6FB26DC2DC5001F306A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,7 +43,7 @@
 		EE4DB75C26DD2C46001F306A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EE4DB75E26DD2EB8001F306A /* RepositoryViewControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewControlle.swift; sourceTree = "<group>"; };
 		EE4DB76026DD2F02001F306A /* RepositoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryViewController.xib; sourceTree = "<group>"; };
-		EEF9635226DD7BE700659493 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		EEF9636126DE2C4600659493 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,14 +75,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		EE3505CB26DD706000A4EC24 /* Dependency */ = {
-			isa = PBXGroup;
-			children = (
-				EE3505C926DD6FB400A4EC24 /* DependencyContainer.swift */,
-			);
-			path = Dependency;
-			sourceTree = "<group>";
-		};
 		EE4DB6ED26DC2DC5001F306A = {
 			isa = PBXGroup;
 			children = (
@@ -104,16 +96,16 @@
 		EE4DB6F826DC2DC5001F306A /* TestApp */ = {
 			isa = PBXGroup;
 			children = (
+				EEF9636326DE2E2200659493 /* RootComponent */,
+				EEF9636026DE2C3900659493 /* Sources */,
 				EE4DB70726DC2DC6001F306A /* Info.plist */,
-				EE4DB75026DD0A54001F306A /* UserSearch View */,
+				EE4DB75026DD0A54001F306A /* RepositorySearch View */,
 				EE4DB76226DD2F06001F306A /* Repository View */,
 				EE4DB75726DD14C5001F306A /* Model */,
 				EE4DB6F726DC2DC5001F306A /* Products */,
 				EE4DB70E26DCB350001F306A /* Supporting Files */,
 				EE4DB75B26DD200E001F306A /* Rest */,
 				EEF9634E26DD741A00659493 /* Other */,
-				EE3505CB26DD706000A4EC24 /* Dependency */,
-				EEF9635226DD7BE700659493 /* Builder.swift */,
 			);
 			path = TestApp;
 			sourceTree = "<group>";
@@ -129,14 +121,14 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		EE4DB75026DD0A54001F306A /* UserSearch View */ = {
+		EE4DB75026DD0A54001F306A /* RepositorySearch View */ = {
 			isa = PBXGroup;
 			children = (
 				EE4DB74C26DD0A2E001F306A /* RepositorySearchViewController.swift */,
 				EE4DB75126DD0AFA001F306A /* RepositorySearchViewController.xib */,
 				EE4DB75826DD151E001F306A /* ViewModel */,
 			);
-			path = "UserSearch View";
+			path = "RepositorySearch View";
 			sourceTree = "<group>";
 		};
 		EE4DB75726DD14C5001F306A /* Model */ = {
@@ -180,6 +172,22 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		EEF9636026DE2C3900659493 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				EEF9636126DE2C4600659493 /* NeedleGenerated.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		EEF9636326DE2E2200659493 /* RootComponent */ = {
+			isa = PBXGroup;
+			children = (
+				EE3505C926DD6FB400A4EC24 /* RootComponent.swift */,
+			);
+			path = RootComponent;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +195,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE4DB70A26DC2DC6001F306A /* Build configuration list for PBXNativeTarget "TestApp" */;
 			buildPhases = (
+				EEF9635E26DE28A000659493 /* ShellScript */,
 				4BB07451A80F21141CF42F47 /* [CP] Check Pods Manifest.lock */,
 				EE4DB70D26DCB0F0001F306A /* ShellScript */,
 				EE4DB6F226DC2DC5001F306A /* Sources */,
@@ -289,6 +298,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n\n\"${PODS_ROOT}/SwiftLint/swiftlint\" autocorrect --quiet --config \"${SRCROOT}/_swiftlint.yml\" --path \"${SRCROOT}/TestApp\"\n\"${PODS_ROOT}/SwiftLint/swiftlint\" lint --quiet --config \"${SRCROOT}/_swiftlint.yml\" --path \"${SRCROOT}/TestApp\"\n\n\n\n\n\n\n\n";
 		};
+		EEF9635E26DE28A000659493 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nexport SOURCEKIT_LOGGIN=0 && needle generate Sources/NeedleGenerated.swift \n\n\n\n";
+		};
 		F8AD20137E992767E85EEB36 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,12 +343,12 @@
 				EE4DB75426DD1410001F306A /* RepositorySearchViewModel.swift in Sources */,
 				EE4DB74D26DD0A2E001F306A /* RepositorySearchViewController.swift in Sources */,
 				EE4DB75A26DD198B001F306A /* Rest.swift in Sources */,
+				EEF9636226DE2C4600659493 /* NeedleGenerated.swift in Sources */,
 				EE4DB75D26DD2C46001F306A /* Keys.swift in Sources */,
 				EE4DB75F26DD2EB8001F306A /* RepositoryViewControlle.swift in Sources */,
 				EE4DB75626DD14BA001F306A /* Repository.swift in Sources */,
-				EE3505CA26DD6FB400A4EC24 /* DependencyContainer.swift in Sources */,
+				EE3505CA26DD6FB400A4EC24 /* RootComponent.swift in Sources */,
 				EE4DB6FC26DC2DC5001F306A /* SceneDelegate.swift in Sources */,
-				EEF9635326DD7BE700659493 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

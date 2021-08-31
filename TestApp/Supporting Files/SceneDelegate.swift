@@ -17,9 +17,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
 
-        let controller = RepositorySearchViewController(nibName: "RepositorySearchViewController", searchRepositoryViewModel: RepositorySearchViewModel())
-
-        let navigationController = UINavigationController(rootViewController: controller)
+        /* From documentation SwiftNeedle */
+        let rootComponent = RootComponent()
+        let navigationController = UINavigationController(rootViewController: rootComponent.repositorySearchViewController)
 
         window.rootViewController = navigationController
 
