@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class RepositorySearchViewController: UIViewController {
+final class RepositorySearchViewController: UIViewController {
 
     // MARK: - @IBOutlets + views
 
@@ -49,39 +49,38 @@ class RepositorySearchViewController: UIViewController {
     // MARK: - Actions
 
     private func bind() {
-
         // Bind searched repositories to tableView
-       _ = srchRepoVM.repos.bind(to: tableView.rx.items(cellIdentifier: Keys.cell.rawValue, cellType: UITableViewCell.self)) { _, repo, cell in
+        srchRepoVM.repos.bind(to: tableView.rx.items(cellIdentifier: Keys.cell.rawValue, cellType: UITableViewCell.self)) { _, repo, cell in
             cell.textLabel?.text = repo.name
         }.disposed(by: disposeBag)
 
         // Set selc action for cell
         self.tableView.rx.itemSelected
-          .subscribe(onNext: { [weak self] indexPath in
-            do {
-                let repositories = try self?.srchRepoVM.repos.value()
-                guard let repository = repositories?[indexPath.row] else {
-                    return
+            .subscribe(onNext: { [weak self] indexPath in
+                do {
+                    let repositories = try self?.srchRepoVM.repos.value()
+                    guard let repository = repositories?[indexPath.row] else {
+                        return
+                    }
+                    let repositoryController = RepositoryViewController(nibName: Controllers.repoVC, repository: repository)
+                    self?.navigationController?.pushViewController(repositoryController, animated: true)
+                } catch {
+                    print("Error get repository")
                 }
-                let repositoryController = RepositoryViewController(nibName: Controllers.repoVC, repository: repository)
-                self?.navigationController?.pushViewController(repositoryController, animated: true)
-            } catch {
-                print("Error get repository")
-            }
 
-          }).disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
 
     private func configureUI() {
-        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: Keys.cell.rawValue)
-        self.textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
+      tableView.register(UITableViewCell.self, forCellReuseIdentifier: Keys.cell.rawValue)
+      textField.addTarget(self, action: #selector(textDidChange(_:)), for: .editingChanged)
     }
 
-    @objc func textDidChange(_ textField: UITextField) {
+    @objc private func textDidChange(_ textField: UITextField) {
         guard textField.text != "" else {
             // Clean repositories if textField is empty
-            self.srchRepoVM.repos.onNext([])
+            srchRepoVM.repos.onNext([])
             return }
-        self.srchRepoVM.searhUsers(with: textField.text!)
+        srchRepoVM.searhUsers(with: textField.text!)
     }
 }

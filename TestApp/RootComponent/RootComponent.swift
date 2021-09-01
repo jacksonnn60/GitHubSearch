@@ -9,8 +9,13 @@ import Foundation
 import RxSwift
 import NeedleFoundation
 
- class RootComponent: BootstrapComponent {
+protocol IRootComponent {
+    var disposeBag: DisposeBag { get }
+    var searchRepoVM: RepositorySearchViewModel { get }
+    var repositorySearchViewController: RepositorySearchViewController { get }
+}
 
+final class RootComponent: BootstrapComponent, IRootComponent {
     /* From documentation SwiftNeedle */
 
     var disposeBag: DisposeBag {

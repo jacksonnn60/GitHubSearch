@@ -7,16 +7,27 @@
 
 import Foundation
 
-struct Repository: Codable {
-    var name: String
-    var owner: OwnerKey
-    var watchers: Int?
-    var description: String?
-    var language: String
+
+// MARK: - Repository
+struct Repository: IModel {
+    let name: String
+    let watchers: Int?
+    let repositoryDescription: String?
+    let owner: Owner
+    let language: String
+
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case watchers = "watchers"
+        case repositoryDescription = "description"
+        case owner = "owner"
+        case language = "language"
+    }
 }
 
-struct OwnerKey: Codable {
-    var login: String
+// MARK: - Owner
+struct Owner: IModel {
+    let login: String
 }
 
-
+extension Array: IModel where Element: IModel {}

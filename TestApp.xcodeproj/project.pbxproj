@@ -21,6 +21,8 @@
 		EE4DB75D26DD2C46001F306A /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75C26DD2C46001F306A /* Keys.swift */; };
 		EE4DB75F26DD2EB8001F306A /* RepositoryViewControlle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4DB75E26DD2EB8001F306A /* RepositoryViewControlle.swift */; };
 		EE4DB76126DD2F02001F306A /* RepositoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE4DB76026DD2F02001F306A /* RepositoryViewController.xib */; };
+		EEEFC9EA26DF8DC90012535D /* IModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEFC9E926DF8DC90012535D /* IModel.swift */; };
+		EEEFC9ED26DFAB9C0012535D /* RepositoryDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEFC9EC26DFAB9C0012535D /* RepositoryDataProvider.swift */; };
 		EEF9636226DE2C4600659493 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEF9636126DE2C4600659493 /* NeedleGenerated.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		EE4DB75C26DD2C46001F306A /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EE4DB75E26DD2EB8001F306A /* RepositoryViewControlle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewControlle.swift; sourceTree = "<group>"; };
 		EE4DB76026DD2F02001F306A /* RepositoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryViewController.xib; sourceTree = "<group>"; };
+		EEEFC9E926DF8DC90012535D /* IModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IModel.swift; sourceTree = "<group>"; };
+		EEEFC9EC26DFAB9C0012535D /* RepositoryDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDataProvider.swift; sourceTree = "<group>"; };
 		EEF9636126DE2C4600659493 /* NeedleGenerated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,7 @@
 				EE4DB74C26DD0A2E001F306A /* RepositorySearchViewController.swift */,
 				EE4DB75126DD0AFA001F306A /* RepositorySearchViewController.xib */,
 				EE4DB75826DD151E001F306A /* ViewModel */,
+				EEEFC9F026DFABCE0012535D /* DataProviders */,
 			);
 			path = "RepositorySearch View";
 			sourceTree = "<group>";
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				EE4DB75526DD14BA001F306A /* Repository.swift */,
+				EEEFC9E926DF8DC90012535D /* IModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -162,6 +168,14 @@
 				EE4DB76026DD2F02001F306A /* RepositoryViewController.xib */,
 			);
 			path = "Repository View";
+			sourceTree = "<group>";
+		};
+		EEEFC9F026DFABCE0012535D /* DataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				EEEFC9EC26DFAB9C0012535D /* RepositoryDataProvider.swift */,
+			);
+			path = DataProviders;
 			sourceTree = "<group>";
 		};
 		EEF9634E26DD741A00659493 /* Other */ = {
@@ -195,8 +209,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EE4DB70A26DC2DC6001F306A /* Build configuration list for PBXNativeTarget "TestApp" */;
 			buildPhases = (
-				EEF9635E26DE28A000659493 /* ShellScript */,
 				4BB07451A80F21141CF42F47 /* [CP] Check Pods Manifest.lock */,
+				EEF9635E26DE28A000659493 /* ShellScript */,
 				EE4DB70D26DCB0F0001F306A /* ShellScript */,
 				EE4DB6F226DC2DC5001F306A /* Sources */,
 				EE4DB6F326DC2DC5001F306A /* Frameworks */,
@@ -347,7 +361,9 @@
 				EE4DB75D26DD2C46001F306A /* Keys.swift in Sources */,
 				EE4DB75F26DD2EB8001F306A /* RepositoryViewControlle.swift in Sources */,
 				EE4DB75626DD14BA001F306A /* Repository.swift in Sources */,
+				EEEFC9ED26DFAB9C0012535D /* RepositoryDataProvider.swift in Sources */,
 				EE3505CA26DD6FB400A4EC24 /* RootComponent.swift in Sources */,
+				EEEFC9EA26DF8DC90012535D /* IModel.swift in Sources */,
 				EE4DB6FC26DC2DC5001F306A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

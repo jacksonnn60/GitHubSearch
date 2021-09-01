@@ -8,11 +8,11 @@
 import Foundation
 
 protocol RestProtocol {
-    static func get< T: Codable > (urlString: String, generalType: T.Type, completion: @escaping (Result<T, Error>) -> Void)
+    static func get< T: IModel > (urlString: String, generalType: T.Type, completion: @escaping (Result<T, Error>) -> Void)
 }
 
 class Rest: RestProtocol {
-    static func get< T: Codable > (urlString: String, generalType: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+    static func get< T: IModel > (urlString: String, generalType: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
 
         guard let url = URL(string: urlString) else { return }
         let task = URLSession.shared.dataTask(with: url) { (data, _, _) in

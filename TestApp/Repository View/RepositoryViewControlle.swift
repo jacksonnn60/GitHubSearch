@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RepositoryViewController: UIViewController {
+final class RepositoryViewController: UIViewController {
 
     // MARK: - @IBOutlets
 
@@ -19,7 +19,7 @@ class RepositoryViewController: UIViewController {
 
     // MARK: - Variables
 
-    private var repository: Repository?
+    private let repository: Repository
 
     // MARK: - Init
 
@@ -36,22 +36,21 @@ class RepositoryViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.isNavigationBarHidden = false
+        navigationController?.isNavigationBarHidden = false
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.configureUI()
+        configureUI()
     }
 
     // MARK: - Actions
 
     private func configureUI() {
-        guard let repo = repository else { return }
-        self.repositoryNameLabel.text = "Repository Name: \(repo.name)"
-        self.ownerLabel.text = "Owner: \(repo.owner.login)"
-        self.descriptionLabel.text = repo.description ?? "--"
-        self.watchersLabel.text = "Watchers: \(repo.watchers ?? 0)"
-        self.languageLabele.text = "Language: \(repo.language)"
+       repositoryNameLabel.text = "Repository Name: \(repository.name)"
+       ownerLabel.text = "Owner: \(repository.owner.login)"
+       descriptionLabel.text = repository.repositoryDescription ?? "--"
+       watchersLabel.text = "Watchers: \(repository.watchers ?? 0)"
+       languageLabele.text = "Language: \(repository.language)"
     }
 }
